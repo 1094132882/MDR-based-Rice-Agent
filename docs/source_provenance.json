@@ -1,0 +1,28 @@
+{
+  "source_commit": "dd1e3fe4658cc0920ceddc14992f3388648b7734",
+  "source_worktree_included": true,
+  "git_history_copied": false,
+  "credential_literal_files_sanitized": [
+    "experiment/benchmark_kg_queries.py",
+    "experiment/agent_scot.py",
+    "experiment/graph.py",
+    "methods/s_cot_raps/test_tool_direct.py",
+    "methods/s_cot_raps/diagnose_tool.py",
+    "methods/s_cot_raps/validator.py",
+    "methods/s_cot_raps/diagnose_schema.py",
+    "methods/s_cot_raps/fix_tools_direct.py",
+    "methods/s_cot_raps/audit_db_dictionary.py",
+    "methods/s_cot_raps/diagnose_neo4j.py",
+    "methods/s_cot_raps/test_all_tools.py",
+    "methods/s_cot_raps/check_database.py",
+    "methods/s_cot_raps/config.py",
+    "methods/s_cot_raps/create_index.py",
+    "methods/s_cot_raps/setup_env.py",
+    "methods/s_cot_raps/diagnose_tools.py",
+    "update_graph/ObjectClass.py",
+    "update_graph/Subdomain.py",
+    "update_graph/Proterty.py",
+    "rice_vue/src/components/ai/index.vue"
+  ],
+  "results_included": false
+}

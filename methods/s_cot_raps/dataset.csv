@@ -1,0 +1,151 @@
+question,ground_truth,split,tool
+LOC_Os08g02050在基因组中的具体物理坐标是多少？,基因LOC_Os08g02050的位置在Chr08:662167-667559。,type1,gene_basic_info
+我需要OsR498G0306509300.01的完整染色体定位信息。,基因OsR498G0306509300.01的位置在Chr03:24730650-24731229。,type1,gene_basic_info
+基因OsJ4155_10g0136300所在的染色体及其坐标范围是什么？,基因OsJ4155_10g0136300的位置在Chr10:15602964-15605797。,type1,gene_basic_info
+OsKeNa_06g0008790的染色体位置包括哪些信息？,基因OsKeNa_06g0008790的位置在Chr06:6787232-6789621。,type1,gene_basic_info
+查询OsMH63_09G0067400的染色体编号及其物理坐标。,基因OsMH63_09G0067400的位置在Chr09:4592702-4593722。,type1,gene_basic_info
+Os02428G0380001552.01基因所在的DNA链是正链还是负链？,基因Os02428G0380001552.01位于正链。,type2,gene_basic_info
+OsYX1G0926018000.01在染色体上的转录方向是正向还是反向？,基因OsYX1G0926018000.01位于负链。,type2,gene_basic_info
+我需要OsZS97_04G0321100的链特异性信息，该基因位于哪条链？,基因OsZS97_04G0321100位于负链。,type2,gene_basic_info
+OsYX1G0412881600.01在基因组组装中的链方向是什么？,基因OsYX1G0412881600.01位于负链。,type2,gene_basic_info
+野生稻基因Oglab_019557的链性特征如何？,基因Oglab_019557位于正链。,type2,gene_basic_info
+OsN22_01G017170基因注释中记录的mRNA转录本有哪些？,基因OsN22_01G017170的转录本为OsN22_01G017170_01。,type3,gene_basic_info
+OsR498G0917308900.01的所有可变剪接转录本名称。,基因OsR498G0917308900.01的转录本为OsR498G0917308900.01.T01。,type3,gene_basic_info
+OsDHX2G0925683500.01在注释数据库中有几个mRNA记录？,基因OsDHX2G0925683500.01共有5个转录本:1.OsDHX2G0925683500.01.T05 2.OsDHX2G0925683500.01.T01 3.OsDHX2G0925683500.01.T04 4.OsDHX2G0925683500.01.T02 5.OsDHX2G0925683500.01.T03 ,type3,gene_basic_info
+OsWSSMG0508338800.01的注释文件中列出的转录本有哪些？,基因OsWSSMG0508338800.01共有2个转录本:1.OsWSSMG0508338800.01.T02 2.OsWSSMG0508338800.01.T01 ,type3,gene_basic_info
+TMG0203363700.01基因的完整DNA序列是什么？,基因TMG0203363700.01的DNA序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/TMG0203363700.01/)进行查看。,type4,gene_basic_info
+请提供OsLima_11g0007430的核苷酸序列,基因OsLima_11g0007430的DNA序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsLima_11g0007430/)进行查看。,type4,gene_basic_info
+OsXL628S_03g0480500的DNA碱基排列顺序是什么？,基因OsXL628S_03g0480500的DNA序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsXL628S_03g0480500/)进行查看。,type4,gene_basic_info
+OsY58SG0304718200.01的整个基因序列内容有哪些？,基因OsY58SG0304718200.01的DNA序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsY58SG0304718200.01/)进行查看。,type4,gene_basic_info
+请展示OsII32G0309435900.01基因的编码区全序列,基因OsII32G0309435900.01的CDS序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsII32G0309435900.01/)进行查看。,type5,gene_basic_info
+请描述OsCN1G0619538500.01的CDS区域完整序列,基因OsCN1G0619538500.01的CDS序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsCN1G0619538500.01/)进行查看。,type5,gene_basic_info
+能否获取OsR498G0815135700.01的CDS序列原始数据？,基因OsR498G0815135700.01的CDS序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsR498G0815135700.01/)进行查看。,type5,gene_basic_info
+OsYX1G0516116600.01的基因编码序列是什么？,基因OsYX1G0516116600.01的CDS序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsYX1G0516116600.01/)进行查看。,type5,gene_basic_info
+OsII32G0825878500.01基因编码的蛋白质完整氨基酸序列是什么？,基因OsII32G0825878500.01的蛋白质序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsII32G0825878500.01/)进行查看。,type6,gene_basic_info
+基因OsR498G0408186000.01的蛋白质序列是什么？,基因OsR498G0408186000.01的蛋白质序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsR498G0408186000.01/)进行查看。,type6,gene_basic_info
+我想知道OsR498G0102088400.01蛋白质序列信息。,基因OsR498G0102088400.01的蛋白质序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsR498G0102088400.01/)进行查看。,type6,gene_basic_info
+能否提供OsFS32G0304704900.01的蛋白质序列？,基因OsFS32G0304704900.01的蛋白质序列可以通过点击[链接](https://riceome.hzau.edu.cn/dev/genecard/OsFS32G0304704900.01/)进行查看。,type6,gene_basic_info
+OsMH63_03G0194400这个基因有没有突变体？,基因OsMH63_03G0194400共有6个突变体:1.22NBF05 2.22NBS71 3.22NBN55 4.22NBB71 5.22NBO27 6.22NBN53 ,type7,gene_mutant_info
+OsDHX2G0304534500.01是否有已报道的突变体？,基因OsDHX2G0304534500.01共有6个突变体:1.22NBO27 2.22NBF05 3.22NBB71 4.22NBS71 5.22NBN55 6.22NBN53 ,type7,gene_mutant_info
+OsFH838G0306139900.01存在突变体材料吗？,基因OsFH838G0306139900.01共有6个突变体:1.22NBB71 2.22NBO27 3.22NBS71 4.22NBF05 5.22NBN55 6.22NBN53 ,type7,gene_mutant_info
+OsKoshG0304523500.01是否有突变体记录？,基因OsKoshG0304523500.01共有6个突变体:1.22NBN55 2.22NBS71 3.22NBB71 4.22NBO27 5.22NBN53 6.22NBF05 ,type7,gene_mutant_info
+OsJ4155_03g0172800存在突变体材料吗？,基因OsJ4155_03g0172800共有6个突变体:1.22NBB71 2.22NBF05 3.22NBS71 4.22NBN53 5.22NBO27 6.22NBN55 ,type7,gene_mutant_info
+22NBT41突变体材料关联的基因名称是什么？,22NBT41共与8个基因有关:1.OsR527G0101923600.01 2.LOC_Os01g45914 3.OsD62G0103369000.01 4.OsZS97_01G0427200 5.Os01g0647200 6.OsFH838G0100599800.01 7.OsNip_01g0647200 8.OsKY131G0100716600.01 ,type8,gene_mutant_info
+能告诉我22NBQ02突变体所针对的基因吗？,22NBQ02共与17个基因有关:1.OsLima_02g0035490 2.OsLiXu_02g0035520 3.OsIR64_02g0035240 4.OsGoSa_02g0035570 5.OsZS97_02G0569100 6.OsKeNa_02g0035840 7.OsKYG_02g0035310 8.OsPr106_02g0035400 9.OsNaBo_02g0035490 10.OsCMeo_02g0035700 11.OsMH63_02G0538800 12.Oglab_013972 13.OsN22_02G035780 14.OsARC_02g0035270 15.OsAzu_02g0035740 16.OsLaMu_02g0035110 17.LOC_Os02g53800 ,type8,gene_mutant_info
+22NBK91突变体的遗传学标记指向哪个基因？,22NBK91共与20个基因有关:1.OsLiXu_03g0036000 2.OsFH838G0308405400.01 3.OsIR64_03g0035760 4.OsNaBo_03g0035540 5.OsN22_03G035760 6.OsGoSa_03g0035910 7.R9311C03g13822 8.OsARC_03g0036440 9.OsAzu_03g0036400 10.Oglab_009262 11.OsLaMu_03g0035950 12.OsKYG_03g0036250 13.OsKeNa_03g0036070 14.OsD62G0312862600.01 15.OsNip_03g0773150 16.OsLima_03g0036240 17.OsPr106_03g0035960 18.OsCMeo_03g0036150 19.Os03g0773150 20.LOC_Os03g56241 ,type8,gene_mutant_info
+请确认22NBL56关联的候选基因,22NBL56共与12个基因有关:1.OsARC_01g0005380 2.OsLJG0100184700.01 3.OsKY131G0100154900.01 4.OsKoshG0100188900.01 5.OsAzu_01g0005770 6.OsZH11G0100187500.01 7.OsCMeo_01g0005740 8.OsLemontG0100193300.01 9.LOC_Os01g08350 10.OsDHX2G0100190500.01 11.OsNamRooG0100195300.01 12.Os02428G0100199500.01 ,type8,gene_mutant_info
+Os02g0692000对应的OGI编号是多少？,基因Os02g0692000属于OGI:02080060。,type9,ogi_info
+Os06g0505501属于哪个OGI分类？,基因Os06g0505501属于OGI:06049041。,type9,ogi_info
+请告诉我OsTumbaG0715259300.01的OGI信息,基因OsTumbaG0715259300.01属于OGI:07039030。,type9,ogi_info
+OsMH63_11G0133400的OGI归属是什么？,基因OsMH63_11G0133400属于OGI:11025360。,type9,ogi_info
+OsFH838G0100878100.01隶属于哪个OGI？,基因OsFH838G0100878100.01属于OGI:01108550。,type9,ogi_info
+Oglab_031075的OGI编号？,基因Oglab_031075属于OGI:12011430。,type9,ogi_info
+OGI:08059490这个分类里有哪些水稻基因？,OGI:08059490共有1个基因:1.OsLiXu_08g0016471 ,type10,ogi_info
+OGI:99000957这个OGI分类里有哪些基因？,OGI:99000957共有1个基因:1.OsWSSMG0080003638.01 ,type10,ogi_info
+我想知道OGI编号08031210包含哪些基因,OGI:08031210共有2个基因:1.OsMH63_08G0170500 2.OsZS97_08G0172600 ,type10,ogi_info
+怎么查看OGI:04002460包含的基因？,OGI:04002460共有8个基因:1.LOC_Os04g02840 2.OsBasmati1G0413955200.01 3.OsFH838G0408944800.01 4.OsMH63_04G0013900 5.OsZS97_04G0022000 6.TMG0409287200.01 7.OsII32G0413127400.01 8.OsJ4155G0406800500.01 ,type10,ogi_info
+OGI:04072946下保存了哪些基因资料？,OGI:04072946共有3个基因:1.OsYX1G0412015200.01 2.OsY58SG0401181800.01 3.OsFH838G0411328200.01 ,type10,ogi_info
+请说明OsZH11G0820233100.01的生物学功能,基因OsZH11G0820233100.01的注释是Pirin-like protein [UniProtKB/Swiss-Prot:Q9SEE4]。,type11,gene_function
+Oglab_019697的基因功能描述能查到吗？,"基因Oglab_019697的注释是RCC1 domain-containing protein RUG3, mitochondrial [UniProtKB/Swiss-Prot:Q9FJG9]。",type11,gene_function
+OsXL628S_07g0049200的注释信息是什么？,基因OsXL628S_07g0049200的注释是Inhibitor of Bruton tyrosine kinase [UniProtKB/Swiss-Prot:Q9P2D0]。,type11,gene_function
+哪里能找到OsZS97_08G0014000的功能注释？,基因OsZS97_08G0014000的注释是Polyadenylate-binding protein-interacting protein 11 [UniProtKB/Swiss-Prot:Q9LPI5]。,type11,gene_function
+TMG0823155900.01在数据库里的功能描述是什么？,基因TMG0823155900.01的注释是Afadin- and alpha-actinin-binding protein [UniProtKB/Swiss-Prot:Q9Y2D8]。,type11,gene_function
+比较OsLaMu_05g0004930在根和茎中的表达差异,基因OsLaMu_05g0004930在叶中的表达量为0.020074，根中的表达量为16.842091，幼穗的表达数据暂无。,type12,homologous_gene_and_expression
+OsLiXu_06g0008470在幼苗组织中的表达情况如何？,基因OsLiXu_06g0008470在叶中的表达量为1.155385，根中的表达量为9.529963，幼穗中的表达量为6.732497。,type12,homologous_gene_and_expression
+哪里能查OsLima_01g0000510在穗发育阶段的表达量？,基因OsLima_01g0000510在叶中的表达量为0.221995，根中的表达量为0.151120，幼穗的表达数据暂无。,type12,homologous_gene_and_expression
+请列出OsNaBo_06g0009170所有可用的表达量数据,基因OsNaBo_06g0009170在叶中的表达量为0.840403，根中的表达量为3.483606，幼穗中的表达量为0.639737。,type12,homologous_gene_and_expression
+G46的染色体三号在500kb到550kb之间有哪些基因？,在G46的Chr03:500000-550000区域内共有7个基因:1.OsG46G0304286200.01 2.OsG46G0304285900.01 3.OsG46G0304285200.01 4.OsG46G0304285600.01 5.OsG46G0304285400.01 6.OsG46G0304284900.01 7.OsG46G0304285800.01 ,type13,gene_locator
+请提供Y3551品种Chr02:5000-8000区域的所有基因,在Y3551的Chr02:5000-8000区域内共有2个基因:1.OsY3551G0201680000.01 2.OsY3551G0201680400.01 ,type13,gene_locator
+125827品种的染色体四号在700kb到730kb范围内包含哪些基因？,在125827的Chr04:700000-730000区域内共有2个基因:1.OsLiXu_04g0000510 2.OsLiXu_04g0000520 ,type13,gene_locator
+Azucena的一号染色体在100kb到150kb范围内有哪些基因？,在Azucena的Chr01:100000-150000区域内共有6个基因:1.OsAzu_01g0000190 2.OsAzu_01g0000240 3.OsAzu_01g0000230 4.OsAzu_01g0000210 5.OsAzu_01g0000220 6.OsAzu_01g0000200 ,type13,gene_locator
+IR64染色体三号的250kb到280kb区域有哪些基因信息？,在IR64的Chr03:250000-280000区域内共有5个基因:1.OsIR64_03g0000350 2.OsIR64_03g0000370 3.OsIR64_03g0000380 4.OsIR64_03g0000360 5.OsIR64_03g0000390 ,type13,gene_locator
+DHX2品种的Chr12在17kb到20kb之间有什么基因？,在DHX2的Chr12:17000-20000区域内共有2个基因:1.OsDHX2G1231939600.01 2.OsDHX2G1231939400.01 ,type13,gene_locator
+OsLK638S_12g0006300上游15kb有哪些邻近基因？,在OsLK638S_12g0006300的上游15kb区域内共有4个基因:1.OsLK638S_12g0006200 2.OsLK638S_12g0006000 3.OsLK638S_12g0006100 4.OsLK638S_12g0005900 ,type14,adjacent_genes
+OsAzu_08g0019550的基因上游14kb范围内有什么基因？,在OsAzu_08g0019550的上游14kb区域内共有2个基因:1.OsAzu_08g0019530 2.OsAzu_08g0019540 ,type14,adjacent_genes
+OsLK638S_12g0156200上游26kb到该基因间有哪些基因？,在OsLK638S_12g0156200的上游26kb区域内共有3个基因:1.OsLK638S_12g0156100 2.OsLK638S_12g0156000 3.OsLK638S_12g0155900 ,type14,adjacent_genes
+OsNaBo_03g0020360起始位置上游100kb范围内包含哪些基因？,在OsNaBo_03g0020360的上游100kb区域内共有7个基因:1.OsNaBo_03g0020310 2.OsNaBo_03g0020320 3.OsNaBo_03g0020350 4.OsNaBo_03g0020340 5.OsNaBo_03g0020290 6.OsNaBo_03g0020300 7.OsNaBo_03g0020330 ,type14,adjacent_genes
+OsN22_02G038860起始点上游15kb有多少个基因？,在OsN22_02G038860的上游15kb区域内共有3个基因:1.OsN22_02G038850 2.OsN22_02G038830 3.OsN22_02G038840 ,type14,adjacent_genes
+OsZH11G1230835200.01下游100kb内有哪些邻近基因？,在OsZH11G1230835200.01的下游100kb区域内共有11个基因:1.OsZH11G1230848100.01 2.OsZH11G1230836600.01 3.OsZH11G1230848600.01 4.OsZH11G1230846800.01 5.OsZH11G1230843200.01 6.OsZH11G1230848300.01 7.OsZH11G1230839900.01 8.OsZH11G1230845800.01 9.OsZH11G1230841800.01 10.OsZH11G1230847500.01 11.OsZH11G1230840500.01 ,type15,adjacent_genes
+OsG630G0407036700.01终止位点下游30kb能查到什么基因？,在OsG630G0407036700.01的下游30kb区域内共有3个基因:1.OsG630G0407037800.01 2.OsG630G0407037100.01 3.OsG630G0407037500.01 ,type15,adjacent_genes
+OsZS97_03G0203900尾部后面25kb有哪些基因记录？,在OsZS97_03G0203900的下游25kb区域内共有3个基因:1.OsZS97_03G0204100 2.OsZS97_03G0204000 3.OsZS97_03G0204200 ,type15,adjacent_genes
+OsARC_06g0027010结束位置后面13kb有哪些基因？,在OsARC_06g0027010的下游13kb区域内共有4个基因:1.OsARC_06g0027040 2.OsARC_06g0027050 3.OsARC_06g0027030 4.OsARC_06g0027020 ,type15,adjacent_genes
+OsNamRooG0305900600.01最近的头部上游基因是什么？,基因OsNamRooG0305900600.01最近的上游基因是OsNamRooG0305900200.01。,type16,adjacent_genes
+能查到OsG8G0100396500.01最邻近的上游基因吗？,基因OsG8G0100396500.01最近的上游基因是OsG8G0100396300.01。,type16,adjacent_genes
+OsKoshG0305893700.01的上游方向第一个基因是哪个？,基因OsKoshG0305893700.01最近的上游基因是OsKoshG0305893600.01。,type16,adjacent_genes
+Os02428G0100443200.01的上游方向第一个基因名称？,基因Os02428G0100443200.01最近的上游基因是Os02428G0100442500.01。,type16,adjacent_genes
+OsJ4155_01g0086700最近的邻近上游基因编号？,基因OsJ4155_01g0086700最近的上游基因是OsJ4155_01g0086600。,type16,adjacent_genes
+OsKoshG0823111600.01下游最近的基因是哪个？,基因OsKoshG0823111600.01最近的下游基因是OsKoshG0823113900.01。,type17,adjacent_genes
+TMG0307888400.01基因的下游邻居是哪个？,基因TMG0307888400.01最近的下游基因是TMG0307888600.01。,type17,adjacent_genes
+Os01g0266000结束位置之后的下游第一个基因是什么？,基因Os01g0266000最近的下游基因是Os01g0266100。,type17,adjacent_genes
+R9311C01g04681在染色体上下一个最近的基因是哪个？,基因R9311C01g04681最近的下游基因是R9311C01g04682。,type17,adjacent_genes
+OsII32G0414607800.01的下游方向最接近的基因编号是什么？,基因OsII32G0414607800.01最近的下游基因是OsII32G0414609700.01。,type17,adjacent_genes
+OsWSSMG0201940000.01的下游紧接着有什么基因？,基因OsWSSMG0201940000.01最近的下游基因是OsWSSMG0201940200.01。,type17,adjacent_genes
+OsLiXu_02g0032830上游方向前5个最近的基因有哪些？,基因OsLiXu_02g0032830的上游最近5个基因包括：1.OsLiXu_02g0032820 2.OsLiXu_02g0032810 3.OsLiXu_02g0032800 4.OsLiXu_02g0032790 5.OsLiXu_02g0032780 ,type18,adjacent_genes
+OsN22_04G026120基因上游方向前4个相邻基因是哪些？,基因OsN22_04G026120的上游最近4个基因包括：1.OsN22_04G026100 2.OsN22_04G026090 3.OsN22_04G026080 4.OsN22_04G026070 ,type18,adjacent_genes
+Os10g0463600上游区域最近的7个基因能查到吗？,基因Os10g0463600的上游最近7个基因包括：1.Os10g0463400 2.Os10g0463300 3.Os10g0463200 4.Os10g0463100 5.Os10g0462900 6.Os10g0463032 7.Os10g0462966 ,type18,adjacent_genes
+OsLK638S_12g0019200起始点往上游数6个基因有哪些？,基因OsLK638S_12g0019200的上游最近6个基因包括：1.OsLK638S_12g0019100 2.OsLK638S_12g0019000 3.OsLK638S_12g0018900 4.OsLK638S_12g0018800 5.OsLK638S_12g0018700 6.OsLK638S_12g0018600 ,type18,adjacent_genes
+R9311C03g11777上游方向最近的3个基因名称是什么？,基因R9311C03g11777的上游最近3个基因包括：1.R9311C03g11776 2.R9311C03g11775 3.R9311C03g11774 ,type18,adjacent_genes
+OsIR64_01g0041790起始位点上游最近的4个基因是什么？,基因OsIR64_01g0041790的上游最近4个基因包括：1.OsIR64_01g0041780 2.OsIR64_01g0041770 3.OsIR64_01g0041760 4.OsIR64_01g0041750 ,type18,adjacent_genes
+OsNamRooG0613646200.01上游方向前9个基因能否查到？,基因OsNamRooG0613646200.01的上游最近9个基因包括：1.OsNamRooG0613645100.01 2.OsNamRooG0613644600.01 3.OsNamRooG0613644300.01 4.OsNamRooG0613641700.01 5.OsNamRooG0613640600.01 6.OsNamRooG0613640000.01 7.OsNamRooG0613639800.01 8.OsNamRooG0613639600.01 9.OsNamRooG0613639400.01 ,type18,adjacent_genes
+OsLima_09g0002600下游最近的5个基因是哪些？,基因OsLima_09g0002600的下游最近5个基因包括：1.OsLima_09g0002610 2.OsLima_09g0002620 3.OsLima_09g0002630 4.OsLima_09g0002640 5.OsLima_09g0002650 ,type19,adjacent_genes
+Oglab_018058后面紧接着的3个基因名称是什么？,基因Oglab_018058的下游最近3个基因包括：1.Oglab_018059 2.Oglab_018060 3.Oglab_018061 ,type19,adjacent_genes
+OsGoSa_02g0010300的下游前7个基因能查到吗？,基因OsGoSa_02g0010300的下游最近7个基因包括：1.OsGoSa_02g0010310 2.OsGoSa_02g0010320 3.OsGoSa_02g0010330 4.OsGoSa_02g0010340 5.OsGoSa_02g0010350 6.OsGoSa_02g0010360 7.OsGoSa_02g0010370 ,type19,adjacent_genes
+OsLiXu_09g0014330终止位点下游方向前4个基因有哪些？,基因OsLiXu_09g0014330的下游最近4个基因包括：1.OsLiXu_09g0014340 2.OsLiXu_09g0014341 3.OsLiXu_09g0014350 4.OsLiXu_09g0014360 ,type19,adjacent_genes
+OsHZ_05g0076600染色体下游方向数6个最近的基因？,基因OsHZ_05g0076600的下游最近6个基因包括：1.OsHZ_05g0076700 2.OsHZ_05g0076800 3.OsHZ_05g0076900 4.OsHZ_05g0077000 5.OsHZ_05g0077100 6.OsHZ_05g0077200 ,type19,adjacent_genes
+OsG46G0306538400.01下游方向8个基因的编号？,基因OsG46G0306538400.01的下游最近8个基因包括：1.OsG46G0306538600.01 2.OsG46G0306538800.01 3.OsG46G0306539400.01 4.OsG46G0306539600.01 5.OsG46G0306539800.01 6.OsG46G0306540000.01 7.OsG46G0306540200.01 8.OsG46G0306540400.01 ,type19,adjacent_genes
+OsG8G1227671100.01紧跟着的4个下游基因能列出吗？,基因OsG8G1227671100.01的下游最近4个基因包括：1.OsG8G1227672800.01 2.OsG8G1227673000.01 3.OsG8G1227674100.01 4.OsG8G1227674300.01 ,type19,adjacent_genes
+OsIR64_05g0022620的DNA链下游方向6个基因名称？,基因OsIR64_05g0022620的下游最近6个基因包括：1.OsIR64_05g0022630 2.OsIR64_05g0022640 3.OsIR64_05g0022650 4.OsIR64_05g0022660 5.OsIR64_05g0022670 6.OsIR64_05g0022680 ,type19,adjacent_genes
+OsLaMu_09g0015600所属的OGI分组有多少个成员基因？,基因OsLaMu_09g0015600所属的OGI是OGI:09057030，该OGI中共有52个基因。,type20,ogi_info
+OsKY131G0511137200.01所在OGI记录的基因总数是多少？,基因OsKY131G0511137200.01所属的OGI是OGI:05056490，该OGI中共有40个基因。,type20,ogi_info
+LOC_Os05g23940关联的OGI包含多少水个稻基因？,基因LOC_Os05g23940所属的OGI是OGI:05035490，该OGI中共有52个基因。,type20,ogi_info
+OsY58SG0820441200.01所属OGI的基因总数是多少？,基因OsY58SG0820441200.01所属的OGI是OGI:08041130，该OGI中共有48个基因。,type20,ogi_info
+OsKeNa_01g0001150的基因组区域是否发现过结构变异？,基因OsKeNa_01g0001150共存在16个结构变异:1.G630_128077_INS0101000 2.FH838_128077_INS0101030 3.132424_128077_DEL0100840 4.127742_128077_INS0101450 5.127652_128077_TRA0101140 6.Y3551_128077_INS0101020 7.WSSM_128077_INS0101460 8.TM_128077_DEL0100750 9.S548_128077_INS0101380 10.R9311_128077_INS0101420 11.R527_128077_INS0101350 12.OglaRS2_128077_TRA0101290 13.MH63RS3_128077_INS0101050 14.IR64_128077_INS0101380 15.HZ_128077_INS0101450 16.G8_128077_INS0101400 ,type21,structural_variation_locator
+OsFS32G0100048600.01的区域是否存在结构变异？,基因OsFS32G0100048600.01共存在15个结构变异:1.IR64_FS32_OTH0101140 2.DHX2_FS32_INS0101510 3.117425_FS32_INS0101720 4.Basmati1_FS32_INS0101620 5.Azucena_FS32_INS0101420 6.132424_FS32_DEL0101730 7.ZH11_FS32_INS0101570 8.125827_FS32_INS0101350 9.125827_FS32_OTH0101360 10.Tumba_FS32_OTH0101390 11.TM_FS32_DEL0101690 12.NamRoo_FS32_INS0101560 13.125619_FS32_OTH0101310 14.LJ_FS32_INS0101500 15.Lemont_FS32_INS0101520 ,type21,structural_variation_locator
+OsLK638S_01g0013900的变异数据库中有登记结构变异吗？,基因OsLK638S_01g0013900共存在18个结构变异:1.G46_LK638S_INS0101230 2.FS32_LK638S_INS0101270 3.DG_LK638S_TRA0101400 4.D62_LK638S_TRA0101450 5.CN1_LK638S_TRA0101400 6.132424_LK638S_TRA0100590 7.128077_LK638S_INS0100440 8.127564_LK638S_TRA0101050 9.ZS97RS3_LK638S_INS0101250 10.YX1_LK638S_INS0101280 11.XL628S_LK638S_INS0101270 12.Tumba_LK638S_OTH0100650 13.TM_LK638S_TRA0100570 14.R498_LK638S_INS0101270 15.OglaRS2_LK638S_INS0101240 16.125619_LK638S_OTH0101440 17.IR64_LK638S_TRA0101090 18.II32_LK638S_INS0101240 ,type21,structural_variation_locator
+OsPr106_01g0000730是否存在缺失类型的结构变异？,基因OsPr106_01g0000730共存在14个缺失类型的结构变异:1.II32_127742_DEL0100520 2.G46_127742_DEL0100560 3.FS32_127742_DEL0100600 4.DG_127742_DEL0100630 5.D62_127742_DEL0100490 6.CN1_127742_DEL0100540 7.127564_127742_DEL0100310 8.ZS97RS3_127742_DEL0100570 9.YX1_127742_DEL0100500 10.XL628S_127742_DEL0100470 11.125827_127742_DEL0100400 12.R498_127742_DEL0100590 13.125619_127742_DEL0100240 14.IR64_127742_DEL0100260 ,type22,structural_variation_locator
+OsPr106_12g0004160的区域内是否发生易位事件？,基因OsPr106_12g0004160共存在3个易位类型的结构变异:1.125827_127742_TRA1240790 2.TM_127742_TRA1236420 3.125619_127742_TRA1244180 ,type22,structural_variation_locator
+OsFH838G0100044000.01是否有其他类型结构变异的记录？,基因OsFH838G0100044000.01共存在14个其他类型的结构变异:1.DHX2_FH838_OTH0100950 2.DG_FH838_OTH0101980 3.D62_FH838_OTH0102040 4.CN1_FH838_OTH0102100 5.117425_FH838_OTH0101200 6.Basmati1_FH838_OTH0101140 7.Azucena_FH838_OTH0100860 8.132424_FH838_OTH0100990 9.127564_FH838_OTH0101530 10.ZH11_FH838_OTH0101180 11.TM_FH838_OTH0100990 12.NamRoo_FH838_OTH0101100 13.LJ_FH838_OTH0101370 14.Lemont_FH838_OTH0100920 ,type22,structural_variation_locator
+OsNamRooG0100098100.01是否存在deletion类型的结构变异？,基因OsNamRooG0100098100.01共存在13个缺失类型的结构变异:1.G630_NamRoo_DEL0103590 2.FH838_NamRoo_DEL0104610 3.127742_NamRoo_DEL0104260 4.127564_NamRoo_DEL0103700 5.Y58S_NamRoo_DEL0102640 6.Y3551_NamRoo_DEL0103670 7.Tumba_NamRoo_DEL0103520 8.R9311_NamRoo_DEL0104320 9.R527_NamRoo_DEL0104140 10.MH63RS3_NamRoo_DEL0103590 11.LK638S_NamRoo_DEL0102630 12.J4155_NamRoo_DEL0102880 13.J4155S_NamRoo_DEL0102900 ,type22,structural_variation_locator
+OsYX1G0823469700.01的易位类型变异是什么？,基因OsYX1G0823469700.01共存在5个易位类型的结构变异:1.02428_YX1_TRA0807710 2.Y3551_YX1_TRA0805780 3.S548_YX1_TRA0804980 4.R498_YX1_TRA0805450 5.HZ_YX1_TRA0805600 ,type22,structural_variation_locator
+DG的一号染色体50kb至70kb区间内发现了哪些SV？,在DG的Chr01:50000-70000区域内共有1个结构变异:1.结构变异名：OglaRS2_DG_TRA0149320 ， 类型：TRA， 查询基因组：DG， 参考基因组：OglaRS2 ,type23,structural_variation_locator
+02428的Chr03:50kb-60kb范围内是否检测到变异？,在02428的Chr03:50000-60000区域内共有2个结构变异:1.结构变异名：127652_02428_DEL0300140 ， 类型：DEL， 查询基因组：02428， 参考基因组：127652 2.结构变异名：127652_02428_OTH0300120 ， 类型：OTH， 查询基因组：02428， 参考基因组：127652 ,type23,structural_variation_locator
+Azucena染色体Chr03:50kb-100kb范围内有哪些结构变异？,在Azucena的Chr03:50000-100000区域内共有8个结构变异:1.结构变异名：ZS97RS3_Azucena_OTH0300100 ， 类型：OTH， 查询基因组：Azucena， 参考基因组：ZS97RS3 2.结构变异名：OglaRS2_Azucena_INS0300090 ， 类型：INS， 查询基因组：Azucena， 参考基因组：OglaRS2 3.结构变异名：OglaRS2_Azucena_OTH0300080 ， 类型：OTH， 查询基因组：Azucena， 参考基因组：OglaRS2 4.结构变异名：Lemont_Azucena_OTH0300030 ， 类型：OTH， 查询基因组：Azucena， 参考基因组：Lemont 5.结构变异名：KY131_Azucena_OTH0300060 ， 类型：OTH， 查询基因组：Azucena， 参考基因组：KY131 6.结构变异名：G46_Azucena_OTH0300100 ， 类型：OTH， 查询基因组：Azucena， 参考基因组：G46 7.结构变异名：127652_Azucena_OTH0300080 ， 类型：OTH， 查询基因组：Azucena， 参考基因组：127652 8.结构变异名：127652_Azucena_INS0300070 ， 类型：INS， 查询基因组：Azucena， 参考基因组：127652 ,type23,structural_variation_locator
+J4155S的Chr03:50kb-100kb范围内存在哪些结构变异？,在J4155S的Chr03:50000-100000区域内共有1个结构变异:1.结构变异名：KY131_J4155S_DEL0341380 ， 类型：DEL， 查询基因组：J4155S， 参考基因组：KY131 ,type23,structural_variation_locator
+Azucena染色体四号200kb-300kb范围内有哪些ins型SV？,在Azucena的Chr04:200000-300000区域内共有2个插入类型的结构变异:1.结构变异名：OglaRS2_Azucena_INS0436880 ， 查询基因组：Azucena， 参考基因组：OglaRS2 2.结构变异名：117425_Azucena_INS0400760 ， 查询基因组：Azucena， 参考基因组：117425 ,type24,structural_variation_locator
+LJ品种染色体十号350kb-400kb区域是否检测到deletion类型的结构变异？,在LJ的Chr10:350000-400000区域内共有2个缺失类型的结构变异:1.结构变异名：OglaRS2_LJ_DEL1000910 ， 查询基因组：LJ， 参考基因组：OglaRS2 2.结构变异名：125827_LJ_DEL1000880 ， 查询基因组：LJ， 参考基因组：125827 ,type24,structural_variation_locator
+G46的染色体五号在300kb到500kb范围内最长的结构变异是什么？,在G46的Chr05:300000-500000区域内，长度最长的结构变异是OglaRS2_G46_TRA0516490_1，类型为TRA，长度为11605，查询基因组为G46，参考基因组为OglaRS2。,type25,structural_variation_locator
+Y3551品种Chr08上1.2Mb到1.3Mb区域中跨度最大的SV是哪个？,在Y3551的Chr08:1200000-1300000区域内，长度最长的结构变异是Nipponbare_Y3551_TRA0801360，类型为TRA，长度为9880，查询基因组为Y3551，参考基因组为Nipponbare。,type25,structural_variation_locator
+II32的Chr09在400kb到600kb区域最大跨度的SV是哪个？,在II32的Chr09:400000-600000区域内，长度最长的结构变异是DHX2_II32_OTH0900600，类型为OTH，长度为156968，查询基因组为II32，参考基因组为DHX2。,type25,structural_variation_locator
+J4155S的Chr02在900kb到1.1Mb范围内哪个SV最长？,在J4155S的Chr02:900000-1100000区域内，长度最长的结构变异是G630_J4155S_INS0226060，类型为INS，长度为6733，查询基因组为J4155S，参考基因组为G630。,type25,structural_variation_locator
+DG的Chr03在650kb到900kb范围内最长的结构变异类型？,在DG的Chr03:650000-900000区域内，长度最长的结构变异是Lemont_DG_TRA0317650，类型为TRA，长度为12016，查询基因组为DG，参考基因组为Lemont。,type25,structural_variation_locator
+G46的染色体五号300kb-500kb范围内最长的缺失类型结构变异是什么？,在G46的Chr05:300000-500000区域内，类型为缺失的最长结构变异是YX1_G46_DEL0506280，长度为8058，查询基因组为G46，参考基因组为YX1。,type26,structural_variation_locator
+Y3551品种Chr08上1.2Mb-1.5Mb区域中跨度最大的INS类型SV是哪个？,在Y3551的Chr08:1200000-1500000区域内，类型为插入的最长结构变异是ZH11_Y3551_INS0802020，长度为5663，查询基因组为Y3551，参考基因组为ZH11。,type26,structural_variation_locator
+G8的Chr11在150kb-300kb之间最长的deletion类型结构变异参考基因组是？,在G8的Chr11:150000-300000区域内，类型为缺失的最长结构变异是128077_G8_DEL1140940，长度为2988，查询基因组为G8，参考基因组为128077。,type26,structural_variation_locator
+Azucena染色体四号1Mb-1.3Mb范围内最长的插入类型SV是什么？,在Azucena的Chr04:1000000-1300000区域内，类型为插入的最长结构变异是R9311_Azucena_INS0401900_1，长度为20957，查询基因组为Azucena，参考基因组为R9311。,type26,structural_variation_locator
+J4155S的Chr02在900kb-1.1Mb范围内最长的其others类型SV长度？,在J4155S的Chr02:900000-1100000区域内，类型为其他的最长结构变异是132424_J4155S_OTH0200890，长度为1741，查询基因组为J4155S，参考基因组为132424。,type26,structural_variation_locator
+II32的Chr09在400kb到600kb区域的结构变异分类统计结果？,在II32的Chr09:400000-600000区域内，存在178个DEL类型的结构变异，264个INS类型的结构变异，58个OTH类型的结构变异，47个TRA类型的结构变异。,type27,structural_variation_locator
+J4155S的Chr02在900kb到1.1Mb范围内存在多少种结构变异？,在J4155S的Chr02:900000-1100000区域内，存在89个DEL类型的结构变异，83个INS类型的结构变异，39个OTH类型的结构变异，13个TRA类型的结构变异，1个INV类型的结构变异。,type27,structural_variation_locator
+Tumba染色体十二号1.5Mb到1.8Mb区域的SV数量统计？,在Tumba的Chr12:1500000-1800000区域内，存在136个OTH类型的结构变异，47个INV类型的结构变异，239个DEL类型的结构变异，125个INS类型的结构变异，2个TRA类型的结构变异。,type27,structural_variation_locator
+Y58S染色体三号600kb-850kb区域的SV类型分布数量？,在Y58S的Chr03:600000-850000区域内，存在33个OTH类型的结构变异，46个INS类型的结构变异，29个DEL类型的结构变异，7个TRA类型的结构变异。,type27,structural_variation_locator
+127518品种Chr10在500kb到750kb区域的SV统计结果？,在127518的Chr10:500000-750000区域内，存在40个TRA类型的结构变异，38个INS类型的结构变异，94个DEL类型的结构变异，33个OTH类型的结构变异。,type27,structural_variation_locator
+Y3551染色体十号250kb到500kb范围内各类型SV的数目？,在Y3551的Chr10:250000-500000区域内，存在28个TRA类型的结构变异，228个INS类型的结构变异，62个DEL类型的结构变异，17个OTH类型的结构变异。,type27,structural_variation_locator
+Y3551品种Chr08上1.2Mb-1.5Mb区域检测到多少个插入类型SV？,在Y3551的Chr08:1200000-1500000区域内，存在147个类型为插入的结构变异。,type28,structural_variation_locator
+125827品种染色体七号700kb-900kb区域其他类型SV数量？,在125827的Chr07:700000-900000区域内，存在109个类型为其他的结构变异。,type28,structural_variation_locator
+G8的Chr11在150kb-300kb之间deletion变异的统计数目？,在G8的Chr11:150000-300000区域内，存在103个类型为缺失的结构变异。,type28,structural_variation_locator
+IR64染色体六号250kb-550kb区间内易位类型变异的总数？,在IR64的Chr06:250000-550000区域内，存在3个类型为易位的结构变异。,type28,structural_variation_locator
+Tumba六号染色体500kb-750kb缺失类型变异的具体数量？,在Tumba的Chr06:500000-750000区域内，存在135个类型为缺失的结构变异。,type28,structural_variation_locator
+132424_NamRoo_INS0100250是否关联转座子？,结构变异132424_NamRoo_INS0100250关联的装作元件包括：1.long_terminal_repeat 2.Gypsy_LTR_retrotransposon 3.repeat_region ,type29,structural_variation_link
+132278_ZS97RS3_DEL0216520区域内有没有TE注释？,结构变异132278_ZS97RS3_DEL0216520关联的装作元件包括：1.Gypsy_LTR_retrotransposon 2.long_terminal_repeat 3.repeat_region 4.long_terminal_repeat ,type29,structural_variation_link
+Azucena_G8_INS0518170_2有没有转座元件注释？,结构变异Azucena_G8_INS0518170_2关联的装作元件包括：1.Gypsy_LTR_retrotransposon 2.repeat_region 3.target_site_duplication 4.long_terminal_repeat ,type29,structural_variation_link
+132424_Kosh_TRA0101040关联的转座子类型有哪些？,结构变异132424_Kosh_TRA0101040关联的装作元件包括：1.Copia_LTR_retrotransposon 2.target_site_duplication 3.long_terminal_repeat 4.long_terminal_repeat 5.repeat_region ,type29,structural_variation_link
+LJ_R498_INS0439300能否找到转座元件？,结构变异LJ_R498_INS0439300关联的装作元件包括：1.helitron 2.target_site_duplication 3.repeat_region ,type29,structural_variation_link
+Y58S_Nipponbare_INS0434890是否关联转座子？,结构变异Y58S_Nipponbare_INS0434890关联的装作元件包括：1.Gypsy_LTR_retrotransposon 2.repeat_region 3.long_terminal_repeat ,type29,structural_variation_link
+Y58S_Nipponbare_INS0435490的TE注释是什么？,结构变异Y58S_Nipponbare_INS0435490关联的装作元件包括：1.repeat_region 2.Gypsy_LTR_retrotransposon 3.long_terminal_repeat ,type29,structural_variation_link
+Y3551_XL628S_INS1233280_1是否检测到te？,结构变异Y3551_XL628S_INS1233280_1关联的装作元件包括：1.target_site_duplication 2.long_terminal_repeat 3.repeat_region 4.Gypsy_LTR_retrotransposon ,type29,structural_variation_link
+Y58S_II32_INS0507930_2的转座元件类型有哪些？,结构变异Y58S_II32_INS0507930_2关联的装作元件包括：1.repeat_region 2.long_terminal_repeat 3.Gypsy_LTR_retrotransposon ,type29,structural_variation_link
+Y58S_II32_DEL0508740是否存在转座子？,结构变异Y58S_II32_DEL0508740关联的装作元件包括：1.LTR_retrotransposon 2.long_terminal_repeat 3.repeat_region ,type29,structural_variation_link
+J4155S_G8_TRA0101430的SV区域包含哪些TE？,结构变异J4155S_G8_TRA0101430关联的装作元件包括：1.Gypsy_LTR_retrotransposon 2.long_terminal_repeat 3.repeat_region ,type29,structural_variation_link
+J4155S_G8_DEL0101990是否注释到转座元件？,结构变异J4155S_G8_DEL0101990关联的装作元件包括：1.long_terminal_repeat 2.Copia_LTR_retrotransposon 3.repeat_region ,type29,structural_variation_link
+R9311_125827_INS0826750_1是否关联te？,结构变异R9311_125827_INS0826750_1关联的装作元件包括：1.long_terminal_repeat 2.long_terminal_repeat 3.repeat_region 4.Gypsy_LTR_retrotransposon ,type29,structural_variation_link
+127518_132424_DEL0504280的TE分布情况如何？,结构变异127518_132424_DEL0504280关联的装作元件包括：1.repeat_region 2.Gypsy_LTR_retrotransposon 3.long_terminal_repeat ,type29,structural_variation_link
+127518_132424_INS0504950是否存在转座子？,结构变异127518_132424_INS0504950关联的装作元件包括：1.repeat_region 2.long_terminal_repeat 3.Gypsy_LTR_retrotransposon ,type29,structural_variation_link

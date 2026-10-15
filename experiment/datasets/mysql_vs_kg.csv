@@ -1,0 +1,6221 @@
+type,question,mysql,cypher
+1,LOC_Os08g02050在基因组中的具体物理坐标是多少？,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, chromosome, start, end FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''LOC_Os08g02050'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end"
+1,我需要OsR498G0306509300.01的完整染色体定位信息。,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, chromosome, start, end FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''OsR498G0306509300.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end"
+1,基因OsJ4155_10g0136300所在的染色体及其坐标范围是什么？,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, chromosome, start, end FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''OsJ4155_10g0136300'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end"
+1,OsKeNa_06g0008790的染色体位置包括哪些信息？,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, chromosome, start, end FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''OsKeNa_06g0008790'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end"
+1,查询OsMH63_09G0067400的染色体编号及其物理坐标。,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, chromosome, start, end FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''OsMH63_09G0067400'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end"
+1,Os02428G0380001552.01基因所在的DNA链是正链还是负链？,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, strand FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''Os02428G0380001552.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene') > 0
+        AND SUM(COLUMN_NAME='strand') > 0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand"
+1,OsYX1G0926018000.01在染色体上的转录方向是正向还是反向？,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, strand FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''OsYX1G0926018000.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene') > 0
+        AND SUM(COLUMN_NAME='strand') > 0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand"
+1,我需要OsZS97_04G0321100的链特异性信息，该基因位于哪条链？,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, strand FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''OsZS97_04G0321100'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene') > 0
+        AND SUM(COLUMN_NAME='strand') > 0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand"
+1,OsYX1G0412881600.01在基因组组装中的链方向是什么？,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, strand FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''OsYX1G0412881600.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene') > 0
+        AND SUM(COLUMN_NAME='strand') > 0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand"
+1,野生稻基因Oglab_019557的链性特征如何？,"SET SESSION group_concat_max_len = 10000000;
+
+SELECT
+GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        TABLE_NAME,
+        ''' AS source_table, strand FROM `',
+        TABLE_NAME,
+        '` WHERE gene=''Oglab_019557'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA='rgirs2DB'
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene') > 0
+        AND SUM(COLUMN_NAME='strand') > 0
+) AS t;
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand"
+2,我需要OsN22_01G017170的位置信息和DNA序列信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（每张表先过滤 gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsN22_01G017170'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 seq_all（每张表先过滤 gene_id）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, 'seq', ''),
+        ''' AS dataset,
+        gene_id,
+        dna
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsN22_01G017170'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @seq_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='dna')>0
+) t;
+
+-- 拼接最终 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    s.dna
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@seq_sql,
+'
+) AS s
+ON g.dataset = s.dataset
+AND g.gene = s.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       g.dna_seq AS dna"
+2,我需要OsZH11G1230835200.01的位置信息和DNA序列信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（每张表先过滤 gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsZH11G1230835200.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 seq_all（每张表先过滤 gene_id）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, 'seq', ''),
+        ''' AS dataset,
+        gene_id,
+        dna
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsZH11G1230835200.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @seq_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='dna')>0
+) t;
+
+-- 拼接最终 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    s.dna
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@seq_sql,
+'
+) AS s
+ON g.dataset = s.dataset
+AND g.gene = s.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       g.dna_seq AS dna"
+2,我需要OsG630G0407036700.01的位置信息和DNA序列信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（每张表先过滤 gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsG630G0407036700.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 seq_all（每张表先过滤 gene_id）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, 'seq', ''),
+        ''' AS dataset,
+        gene_id,
+        dna
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsG630G0407036700.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @seq_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='dna')>0
+) t;
+
+-- 拼接最终 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    s.dna
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@seq_sql,
+'
+) AS s
+ON g.dataset = s.dataset
+AND g.gene = s.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       g.dna_seq AS dna"
+2,我需要OsZS97_03G0203900的位置信息和DNA序列信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（每张表先过滤 gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsZS97_03G0203900'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 seq_all（每张表先过滤 gene_id）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, 'seq', ''),
+        ''' AS dataset,
+        gene_id,
+        dna
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsZS97_03G0203900'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @seq_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='dna')>0
+) t;
+
+-- 拼接最终 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    s.dna
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@seq_sql,
+'
+) AS s
+ON g.dataset = s.dataset
+AND g.gene = s.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       g.dna_seq AS dna"
+2,我需要OsARC_06g0027010的位置信息和DNA序列信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（每张表先过滤 gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsARC_06g0027010'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 seq_all（每张表先过滤 gene_id）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, 'seq', ''),
+        ''' AS dataset,
+        gene_id,
+        dna
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsARC_06g0027010'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @seq_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='dna')>0
+) t;
+
+-- 拼接最终 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    s.dna
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@seq_sql,
+'
+) AS s
+ON g.dataset = s.dataset
+AND g.gene = s.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       g.dna_seq AS dna"
+2,22NBO27突变相关基因的位置信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（筛选包含 22NBL56 的记录）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''22NBO27'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 最终 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN DISTINCT g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant
+ORDER BY chromosome, toInteger(start), gene"
+2,22NBK91突变相关基因的位置信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（筛选包含 22NBL56 的记录）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''22NBK91'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 最终 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN DISTINCT g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant
+ORDER BY chromosome, toInteger(start), gene"
+2,22NBL56突变相关基因的位置信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（筛选包含 22NBL56 的记录）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''22NBL56'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 最终 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN DISTINCT g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant
+ORDER BY chromosome, toInteger(start), gene"
+2,22NBQ02突变相关基因的位置信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（筛选包含 22NBQ02 的记录）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''22NBQ02'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 最终 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN DISTINCT g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant
+ORDER BY chromosome, toInteger(start), gene"
+2,22NBT41突变相关基因的位置信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（筛选包含 22NBQ02 的记录）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''22NBT41'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 最终 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+RETURN DISTINCT g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant
+ORDER BY chromosome, toInteger(start), gene"
+3,返回OsJ4155_03g0172800基因的位置信息，基因功能和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsJ4155_03g0172800'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        ID,
+        Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsJ4155_03g0172800'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        gene_id,
+        mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsJ4155_03g0172800'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 三表 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants"
+3,返回OsMH63_03G0194400基因的位置信息，基因功能和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsMH63_03G0194400'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        ID,
+        Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsMH63_03G0194400'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        gene_id,
+        mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsMH63_03G0194400'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 三表 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants"
+3,返回OsDHX2G0304534500.01基因的位置信息，基因功能和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsDHX2G0304534500.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        ID,
+        Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsDHX2G0304534500.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        gene_id,
+        mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsDHX2G0304534500.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 三表 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants"
+3,返回OsKoshG0304523500.01基因的位置信息，基因功能和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsKoshG0304523500.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        ID,
+        Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsKoshG0304523500.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        gene_id,
+        mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsKoshG0304523500.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 三表 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants"
+3,返回OsFH838G0306139900.01基因的位置信息，基因功能和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsFH838G0306139900.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        ID,
+        Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsFH838G0306139900.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+        gene_id,
+        mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsFH838G0306139900.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 三表 JOIN
+SET @sql = CONCAT(
+'SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id;'
+);
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants"
+3,OsMH63_11G0133400基因的OGI所属中的所有基因的起始位置和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（所有 mutant 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（只保留包含目标基因的 OGI）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsMH63_11G0133400'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 最终三表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    o.ogi_number,
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@ogi_sql,
+'
+) AS o
+JOIN
+(
+',
+@gene_sql,
+'
+) AS g
+ON o.genes REGEXP CONCAT(''(^|,)'', g.gene, ''(,|$)'')
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+ORDER BY g.chromosome, g.start;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (target:Gene)
+WHERE toString(target.name) = $gene
+MATCH (ogi:OGI)-[:has_a_gene]->(target)
+MATCH (ogi)-[:has_a_gene]->(g:Gene)
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN ogi.name AS ogi,
+       g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT m.name) AS mutants
+ORDER BY chromosome, toInteger(start), gene"
+3,Oglab_031075基因的OGI所属中的所有基因的起始位置和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（所有 mutant 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（只保留包含目标基因的 OGI）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''Oglab_031075'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 最终三表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    o.ogi_number,
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@ogi_sql,
+'
+) AS o
+JOIN
+(
+',
+@gene_sql,
+'
+) AS g
+ON o.genes REGEXP CONCAT(''(^|,)'', g.gene, ''(,|$)'')
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+ORDER BY g.chromosome, g.start;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (target:Gene)
+WHERE toString(target.name) = $gene
+MATCH (ogi:OGI)-[:has_a_gene]->(target)
+MATCH (ogi)-[:has_a_gene]->(g:Gene)
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN ogi.name AS ogi,
+       g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT m.name) AS mutants
+ORDER BY chromosome, toInteger(start), gene"
+3,OsMH63_08G0170500基因的OGI所属中的所有基因的起始位置和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（所有 mutant 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（只保留包含目标基因的 OGI）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsMH63_08G0170500'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 最终三表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    o.ogi_number,
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@ogi_sql,
+'
+) AS o
+JOIN
+(
+',
+@gene_sql,
+'
+) AS g
+ON o.genes REGEXP CONCAT(''(^|,)'', g.gene, ''(,|$)'')
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+ORDER BY g.chromosome, g.start;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (target:Gene)
+WHERE toString(target.name) = $gene
+MATCH (ogi:OGI)-[:has_a_gene]->(target)
+MATCH (ogi)-[:has_a_gene]->(g:Gene)
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN ogi.name AS ogi,
+       g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT m.name) AS mutants
+ORDER BY chromosome, toInteger(start), gene"
+3,OsYX1G0412015200.01基因的OGI所属中的所有基因的起始位置和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（所有 mutant 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（只保留包含目标基因的 OGI）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsYX1G0412015200.01'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 最终三表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    o.ogi_number,
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@ogi_sql,
+'
+) AS o
+JOIN
+(
+',
+@gene_sql,
+'
+) AS g
+ON o.genes REGEXP CONCAT(''(^|,)'', g.gene, ''(,|$)'')
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+ORDER BY g.chromosome, g.start;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (target:Gene)
+WHERE toString(target.name) = $gene
+MATCH (ogi:OGI)-[:has_a_gene]->(target)
+MATCH (ogi)-[:has_a_gene]->(g:Gene)
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN ogi.name AS ogi,
+       g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT m.name) AS mutants
+ORDER BY chromosome, toInteger(start), gene"
+3,LOC_Os04g02840基因的OGI所属中的所有基因的起始位置和突变体信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（所有 bed 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 mutant_all（所有 mutant 表）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（只保留包含目标基因的 OGI）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''LOC_Os04g02840'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 最终三表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    o.ogi_number,
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    m.mutant
+FROM
+(
+',
+@ogi_sql,
+'
+) AS o
+JOIN
+(
+',
+@gene_sql,
+'
+) AS g
+ON o.genes REGEXP CONCAT(''(^|,)'', g.gene, ''(,|$)'')
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+ORDER BY g.chromosome, g.start;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (target:Gene)
+WHERE toString(target.name) = $gene
+MATCH (ogi:OGI)-[:has_a_gene]->(target)
+MATCH (ogi)-[:has_a_gene]->(g:Gene)
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN ogi.name AS ogi,
+       g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT m.name) AS mutants
+ORDER BY chromosome, toInteger(start), gene"
+4,返回OsNaBo_03g0020360基因的位置信息，基因功能，突变体信息和ogi分组,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsNaBo_03g0020360'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsNaBo_03g0020360'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsNaBo_03g0020360'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（OGI信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsNaBo_03g0020360'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsN22_02G038860基因的位置信息，基因功能，突变体信息和ogi分组,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsN22_02G038860'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsN22_02G038860'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsN22_02G038860'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（OGI信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsN22_02G038860'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsAzu_01g0005770基因的位置信息，基因功能，突变体信息和ogi分组,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsAzu_01g0005770'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsAzu_01g0005770'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsAzu_01g0005770'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（OGI信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsAzu_01g0005770'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsNaBo_03g0035540基因的位置信息，基因功能，突变体信息和ogi分组,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsNaBo_03g0035540'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsNaBo_03g0035540'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsNaBo_03g0035540'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（OGI信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsAzu_01g0005770'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsARC_02g0035270基因的位置信息，基因功能，突变体信息和ogi分组,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsARC_02g0035270'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE ID = ''OsARC_02g0035270'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 mutant_all（突变体信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsARC_02g0035270'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all（OGI信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsAzu_01g0005770'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@func_sql,
+'
+) AS f
+ON g.gene = f.ID
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsR498G0917308900.01基因的位置信息，转录本信息，mutant信息和ogi分组。,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsR498G0917308900.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 transcript_all（聚合所有转录本）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsR498G0917308900.01''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+) t;
+
+-- 构造 mutant_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsR498G0917308900.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsR498G0917308900.01'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    tr.transcript_ids,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@trans_sql,
+'
+) AS tr
+ON g.gene = tr.gene_id
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsDHX2G0925683500.01基因的位置信息，转录本信息，mutant信息和ogi分组。,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsDHX2G0925683500.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 transcript_all（聚合所有转录本）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsDHX2G0925683500.01''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+) t;
+
+-- 构造 mutant_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsDHX2G0925683500.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsDHX2G0925683500.01'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    tr.transcript_ids,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@trans_sql,
+'
+) AS tr
+ON g.gene = tr.gene_id
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsWSSMG0508338800.01基因的位置信息，转录本信息，mutant信息和ogi分组。,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsWSSMG0508338800.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene') > 0
+        AND SUM(COLUMN_NAME='chromosome') > 0
+        AND SUM(COLUMN_NAME='start') > 0
+        AND SUM(COLUMN_NAME='end') > 0
+        AND SUM(COLUMN_NAME='strand') > 0
+) t;
+
+-- 构造 transcript_all（聚合所有 transcript）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsWSSMG0508338800.01''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id') > 0
+        AND SUM(COLUMN_NAME='transcript_id') > 0
+) t;
+
+-- 构造 mutant_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsWSSMG0508338800.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id') > 0
+        AND SUM(COLUMN_NAME='mutant') > 0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsWSSMG0508338800.01'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number') > 0
+        AND SUM(COLUMN_NAME='genes') > 0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    tr.transcript_ids,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@trans_sql,
+'
+) AS tr
+ON g.gene = tr.gene_id
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsN22_01G017170基因的位置信息，转录本信息，mutant信息和ogi分组。,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsN22_01G017170'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene') > 0
+        AND SUM(COLUMN_NAME='chromosome') > 0
+        AND SUM(COLUMN_NAME='start') > 0
+        AND SUM(COLUMN_NAME='end') > 0
+        AND SUM(COLUMN_NAME='strand') > 0
+) t;
+
+-- 构造 transcript_all（聚合所有 transcript）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsN22_01G017170''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id') > 0
+        AND SUM(COLUMN_NAME='transcript_id') > 0
+) t;
+
+-- 构造 mutant_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsN22_01G017170'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id') > 0
+        AND SUM(COLUMN_NAME='mutant') > 0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsN22_01G017170'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number') > 0
+        AND SUM(COLUMN_NAME='genes') > 0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    tr.transcript_ids,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@trans_sql,
+'
+) AS tr
+ON g.gene = tr.gene_id
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+4,返回OsYX1G0926018000.01基因的位置信息，转录本信息，mutant信息和ogi分组。,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（位置信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME, '_bed', ''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene = ''OsYX1G0926018000.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene') > 0
+        AND SUM(COLUMN_NAME='chromosome') > 0
+        AND SUM(COLUMN_NAME='start') > 0
+        AND SUM(COLUMN_NAME='end') > 0
+        AND SUM(COLUMN_NAME='strand') > 0
+) t;
+
+-- 构造 transcript_all（聚合所有 transcript）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsYX1G0926018000.01''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id') > 0
+        AND SUM(COLUMN_NAME='transcript_id') > 0
+) t;
+
+-- 构造 mutant_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE gene_id = ''OsYX1G0926018000.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id') > 0
+        AND SUM(COLUMN_NAME='mutant') > 0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `',
+        TABLE_NAME,
+        '`
+        WHERE FIND_IN_SET(''OsYX1G0926018000.01'', genes)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number') > 0
+        AND SUM(COLUMN_NAME='genes') > 0
+) t;
+
+-- 四表 JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    tr.transcript_ids,
+    m.mutant,
+    o.ogi_number
+FROM
+(
+',
+@gene_sql,
+'
+) AS g
+LEFT JOIN
+(
+',
+@trans_sql,
+'
+) AS tr
+ON g.gene = tr.gene_id
+LEFT JOIN
+(
+',
+@mutant_sql,
+'
+) AS m
+ON g.gene = m.gene_id
+LEFT JOIN
+(
+',
+@ogi_sql,
+'
+) AS o
+ON FIND_IN_SET(g.gene, o.genes);
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT m.name) AS mutants,
+       collect(DISTINCT ogi.name) AS ogis"
+5,返回OsLaMu_05g0004930的基本信息、功能信息、转录本信息、表达量信息和mutant信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME,'_bed',''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',TABLE_NAME,'`
+        WHERE gene=''OsLaMu_05g0004930'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+)t;
+
+-- 构造 function_all（功能）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',TABLE_NAME,'`
+        WHERE ID=''OsLaMu_05g0004930'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+)t;
+
+-- 构造 transcript_all（聚合转录本）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsLaMu_05g0004930''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+)t;
+
+-- 构造 expression_all（表达量）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            leaf,
+            root,
+            panicle
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsLaMu_05g0004930'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @expr_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='leaf')>0
+        AND SUM(COLUMN_NAME='root')>0
+        AND SUM(COLUMN_NAME='panicle')>0
+)t;
+
+-- 构造 mutant_all（突变体）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsLaMu_05g0004930'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+)t;
+
+-- 五表 JOIN
+SET @sql=CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    t.transcript_ids,
+    e.leaf,
+    e.root,
+    e.panicle,
+    m.mutant
+FROM
+(
+',@gene_sql,'
+) AS g
+LEFT JOIN
+(
+',@func_sql,'
+) AS f
+ON g.gene=f.ID
+LEFT JOIN
+(
+',@trans_sql,'
+) AS t
+ON g.gene=t.gene_id
+LEFT JOIN
+(
+',@expr_sql,'
+) AS e
+ON g.gene=e.gene_id
+LEFT JOIN
+(
+',@mutant_sql,'
+) AS m
+ON g.gene=m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:measures_gene_expression]->(e:Expression)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT {
+           leaf: e.leaf_value,
+           root: e.root_value,
+           young_ear: e.young_ear_value
+       }) AS expression,
+       collect(DISTINCT m.name) AS mutants"
+5,返回OsG8G1227671100.01的基本信息、功能信息、转录本信息、表达量信息和mutant信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME,'_bed',''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',TABLE_NAME,'`
+        WHERE gene=''OsG8G1227671100.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+)t;
+
+-- 构造 function_all（功能）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',TABLE_NAME,'`
+        WHERE ID=''OsG8G1227671100.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+)t;
+
+-- 构造 transcript_all（聚合转录本）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsG8G1227671100.01''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+)t;
+
+-- 构造 expression_all（表达量）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            leaf,
+            root,
+            panicle
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsG8G1227671100.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @expr_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='leaf')>0
+        AND SUM(COLUMN_NAME='root')>0
+        AND SUM(COLUMN_NAME='panicle')>0
+)t;
+
+-- 构造 mutant_all（突变体）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsG8G1227671100.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+)t;
+
+-- 五表 JOIN
+SET @sql=CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    t.transcript_ids,
+    e.leaf,
+    e.root,
+    e.panicle,
+    m.mutant
+FROM
+(
+',@gene_sql,'
+) AS g
+LEFT JOIN
+(
+',@func_sql,'
+) AS f
+ON g.gene=f.ID
+LEFT JOIN
+(
+',@trans_sql,'
+) AS t
+ON g.gene=t.gene_id
+LEFT JOIN
+(
+',@expr_sql,'
+) AS e
+ON g.gene=e.gene_id
+LEFT JOIN
+(
+',@mutant_sql,'
+) AS m
+ON g.gene=m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:measures_gene_expression]->(e:Expression)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT {
+           leaf: e.leaf_value,
+           root: e.root_value,
+           young_ear: e.young_ear_value
+       }) AS expression,
+       collect(DISTINCT m.name) AS mutants"
+5,返回OsKeNa_01g0001150的基本信息、功能信息、转录本信息、表达量信息和mutant信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME,'_bed',''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',TABLE_NAME,'`
+        WHERE gene=''OsKeNa_01g0001150'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+)t;
+
+-- 构造 function_all（功能）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',TABLE_NAME,'`
+        WHERE ID=''OsKeNa_01g0001150'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+)t;
+
+-- 构造 transcript_all（聚合转录本）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsKeNa_01g0001150''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+)t;
+
+-- 构造 expression_all（表达量）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            leaf,
+            root,
+            panicle
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsKeNa_01g0001150'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @expr_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='leaf')>0
+        AND SUM(COLUMN_NAME='root')>0
+        AND SUM(COLUMN_NAME='panicle')>0
+)t;
+
+-- 构造 mutant_all（突变体）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsKeNa_01g0001150'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+)t;
+
+-- 五表 JOIN
+SET @sql=CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    t.transcript_ids,
+    e.leaf,
+    e.root,
+    e.panicle,
+    m.mutant
+FROM
+(
+',@gene_sql,'
+) AS g
+LEFT JOIN
+(
+',@func_sql,'
+) AS f
+ON g.gene=f.ID
+LEFT JOIN
+(
+',@trans_sql,'
+) AS t
+ON g.gene=t.gene_id
+LEFT JOIN
+(
+',@expr_sql,'
+) AS e
+ON g.gene=e.gene_id
+LEFT JOIN
+(
+',@mutant_sql,'
+) AS m
+ON g.gene=m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:measures_gene_expression]->(e:Expression)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT {
+           leaf: e.leaf_value,
+           root: e.root_value,
+           young_ear: e.young_ear_value
+       }) AS expression,
+       collect(DISTINCT m.name) AS mutants"
+5,返回OsPr106_01g0000730的基本信息、功能信息、转录本信息、表达量信息和mutant信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME,'_bed',''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',TABLE_NAME,'`
+        WHERE gene=''OsPr106_01g0000730'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+)t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',TABLE_NAME,'`
+        WHERE ID=''OsPr106_01g0000730'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+)t;
+
+-- 构造 transcript_all（聚合所有转录本）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsPr106_01g0000730''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+)t;
+
+-- 构造 expression_all（表达量）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            leaf,
+            root,
+            panicle
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsPr106_01g0000730'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @expr_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='leaf')>0
+        AND SUM(COLUMN_NAME='root')>0
+        AND SUM(COLUMN_NAME='panicle')>0
+)t;
+
+-- 构造 mutant_all（突变体）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsPr106_01g0000730'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+)t;
+
+-- 五表 JOIN
+SET @sql=CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    t.transcript_ids,
+    e.leaf,
+    e.root,
+    e.panicle,
+    m.mutant
+FROM
+(
+',@gene_sql,'
+) AS g
+LEFT JOIN
+(
+',@func_sql,'
+) AS f
+ON g.gene=f.ID
+LEFT JOIN
+(
+',@trans_sql,'
+) AS t
+ON g.gene=t.gene_id
+LEFT JOIN
+(
+',@expr_sql,'
+) AS e
+ON g.gene=e.gene_id
+LEFT JOIN
+(
+',@mutant_sql,'
+) AS m
+ON g.gene=m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:measures_gene_expression]->(e:Expression)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT {
+           leaf: e.leaf_value,
+           root: e.root_value,
+           young_ear: e.young_ear_value
+       }) AS expression,
+       collect(DISTINCT m.name) AS mutants"
+5,返回OsWSSMG0201940000.01的基本信息、功能信息、转录本信息、表达量信息和mutant信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT ''',
+        REPLACE(TABLE_NAME,'_bed',''),
+        ''' AS dataset,
+        gene,
+        chromosome,
+        start,
+        end,
+        strand
+        FROM `',TABLE_NAME,'`
+        WHERE gene=''OsWSSMG0201940000.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+)t;
+
+-- 构造 function_all（功能信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `',TABLE_NAME,'`
+        WHERE ID=''OsWSSMG0201940000.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+)t;
+
+-- 构造 transcript_all（聚合所有转录本）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsWSSMG0201940000.01''
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+)t;
+
+-- 构造 expression_all（表达量）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            leaf,
+            root,
+            panicle
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsWSSMG0201940000.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @expr_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='leaf')>0
+        AND SUM(COLUMN_NAME='root')>0
+        AND SUM(COLUMN_NAME='panicle')>0
+)t;
+
+-- 构造 mutant_all（突变体）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `',TABLE_NAME,'`
+        WHERE gene_id=''OsWSSMG0201940000.01'''
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM(
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+)t;
+
+-- 五表 JOIN
+SET @sql=CONCAT(
+'
+SELECT
+    g.gene,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    f.Description,
+    t.transcript_ids,
+    e.leaf,
+    e.root,
+    e.panicle,
+    m.mutant
+FROM
+(
+',@gene_sql,'
+) AS g
+LEFT JOIN
+(
+',@func_sql,'
+) AS f
+ON g.gene=f.ID
+LEFT JOIN
+(
+',@trans_sql,'
+) AS t
+ON g.gene=t.gene_id
+LEFT JOIN
+(
+',@expr_sql,'
+) AS e
+ON g.gene=e.gene_id
+LEFT JOIN
+(
+',@mutant_sql,'
+) AS m
+ON g.gene=m.gene_id;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (g:Gene)
+WHERE toString(g.name) = $gene
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:measures_gene_expression]->(e:Expression)
+OPTIONAL MATCH (g)-[:has_a_mutant]->(m:Mutant)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       collect(DISTINCT f.name) AS functions,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT {
+           leaf: e.leaf_value,
+           root: e.root_value,
+           young_ear: e.young_ear_value
+       }) AS expression,
+       collect(DISTINCT m.name) AS mutants"
+5,返回22NBN53突变相关基因的基本信息、ogi信息、转录本信息、基因功能信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 mutant_all（先定位gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `', TABLE_NAME, '`
+        WHERE FIND_IN_SET(''22NBN53'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene,
+            chromosome,
+            start,
+            end,
+            strand
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 transcript_all（聚合）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `', TABLE_NAME, '`
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 五表JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    m.gene_id,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    o.ogi_number,
+    t.transcript_ids,
+    f.Description
+FROM
+(
+', @mutant_sql, '
+) AS m
+LEFT JOIN
+(
+', @gene_sql, '
+) AS g
+ON m.gene_id = g.gene
+LEFT JOIN
+(
+', @ogi_sql, '
+) AS o
+ON FIND_IN_SET(m.gene_id, o.genes)
+LEFT JOIN
+(
+', @trans_sql, '
+) AS t
+ON m.gene_id = t.gene_id
+LEFT JOIN
+(
+', @func_sql, '
+) AS f
+ON m.gene_id = f.ID;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant,
+       collect(DISTINCT ogi.name) AS ogis,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT f.name) AS functions
+ORDER BY chromosome, toInteger(start), gene"
+5,返回22NBD78突变相关基因的基本信息、ogi信息、转录本信息、基因功能信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 mutant_all（先定位gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `', TABLE_NAME, '`
+        WHERE FIND_IN_SET(''22NBD78'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene,
+            chromosome,
+            start,
+            end,
+            strand
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 transcript_all（聚合）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `', TABLE_NAME, '`
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 五表JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    m.gene_id,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    o.ogi_number,
+    t.transcript_ids,
+    f.Description
+FROM
+(
+', @mutant_sql, '
+) AS m
+LEFT JOIN
+(
+', @gene_sql, '
+) AS g
+ON m.gene_id = g.gene
+LEFT JOIN
+(
+', @ogi_sql, '
+) AS o
+ON FIND_IN_SET(m.gene_id, o.genes)
+LEFT JOIN
+(
+', @trans_sql, '
+) AS t
+ON m.gene_id = t.gene_id
+LEFT JOIN
+(
+', @func_sql, '
+) AS f
+ON m.gene_id = f.ID;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant,
+       collect(DISTINCT ogi.name) AS ogis,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT f.name) AS functions
+ORDER BY chromosome, toInteger(start), gene"
+5,返回22NBV64突变相关基因的基本信息、ogi信息、转录本信息、基因功能信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 mutant_all（先定位gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `', TABLE_NAME, '`
+        WHERE FIND_IN_SET(''22NBV64'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene,
+            chromosome,
+            start,
+            end,
+            strand
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 transcript_all（聚合）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `', TABLE_NAME, '`
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 五表JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    m.gene_id,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    o.ogi_number,
+    t.transcript_ids,
+    f.Description
+FROM
+(
+', @mutant_sql, '
+) AS m
+LEFT JOIN
+(
+', @gene_sql, '
+) AS g
+ON m.gene_id = g.gene
+LEFT JOIN
+(
+', @ogi_sql, '
+) AS o
+ON FIND_IN_SET(m.gene_id, o.genes)
+LEFT JOIN
+(
+', @trans_sql, '
+) AS t
+ON m.gene_id = t.gene_id
+LEFT JOIN
+(
+', @func_sql, '
+) AS f
+ON m.gene_id = f.ID;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant,
+       collect(DISTINCT ogi.name) AS ogis,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT f.name) AS functions
+ORDER BY chromosome, toInteger(start), gene"
+5,返回22NBO27突变相关基因的基本信息、ogi信息、转录本信息、基因功能信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 mutant_all（先定位gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `', TABLE_NAME, '`
+        WHERE FIND_IN_SET(''22NBO27'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene,
+            chromosome,
+            start,
+            end,
+            strand
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 transcript_all（聚合）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `', TABLE_NAME, '`
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 五表JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    m.gene_id,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    o.ogi_number,
+    t.transcript_ids,
+    f.Description
+FROM
+(
+', @mutant_sql, '
+) AS m
+LEFT JOIN
+(
+', @gene_sql, '
+) AS g
+ON m.gene_id = g.gene
+LEFT JOIN
+(
+', @ogi_sql, '
+) AS o
+ON FIND_IN_SET(m.gene_id, o.genes)
+LEFT JOIN
+(
+', @trans_sql, '
+) AS t
+ON m.gene_id = t.gene_id
+LEFT JOIN
+(
+', @func_sql, '
+) AS f
+ON m.gene_id = f.ID;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant,
+       collect(DISTINCT ogi.name) AS ogis,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT f.name) AS functions
+ORDER BY chromosome, toInteger(start), gene"
+5,返回22NBP78突变相关基因的基本信息、ogi信息、转录本信息、基因功能信息,"SET SESSION group_concat_max_len = 10000000;
+
+-- 构造 mutant_all（先定位gene）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            mutant
+        FROM `', TABLE_NAME, '`
+        WHERE FIND_IN_SET(''22NBP78'', mutant)'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @mutant_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA = DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='mutant')>0
+) t;
+
+-- 构造 gene_all（基本信息）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene,
+            chromosome,
+            start,
+            end,
+            strand
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @gene_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene')>0
+        AND SUM(COLUMN_NAME='chromosome')>0
+        AND SUM(COLUMN_NAME='start')>0
+        AND SUM(COLUMN_NAME='end')>0
+        AND SUM(COLUMN_NAME='strand')>0
+) t;
+
+-- 构造 function_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ID,
+            Description
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @func_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ID')>0
+        AND SUM(COLUMN_NAME='Description')>0
+) t;
+
+-- 构造 transcript_all（聚合）
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            gene_id,
+            GROUP_CONCAT(
+                DISTINCT transcript_id
+                ORDER BY transcript_id
+                SEPARATOR '',''
+            ) AS transcript_ids
+        FROM `', TABLE_NAME, '`
+        GROUP BY gene_id'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @trans_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='gene_id')>0
+        AND SUM(COLUMN_NAME='transcript_id')>0
+) t;
+
+-- 构造 ogi_all
+SELECT GROUP_CONCAT(
+    CONCAT(
+        'SELECT
+            ogi_number,
+            genes
+        FROM `', TABLE_NAME, '`'
+    )
+    SEPARATOR ' UNION ALL '
+)
+INTO @ogi_sql
+FROM (
+    SELECT TABLE_NAME
+    FROM information_schema.COLUMNS
+    WHERE TABLE_SCHEMA=DATABASE()
+    GROUP BY TABLE_NAME
+    HAVING
+        SUM(COLUMN_NAME='ogi_number')>0
+        AND SUM(COLUMN_NAME='genes')>0
+) t;
+
+-- 五表JOIN
+SET @sql = CONCAT(
+'
+SELECT
+    m.gene_id,
+    g.chromosome,
+    g.start,
+    g.end,
+    g.strand,
+    o.ogi_number,
+    t.transcript_ids,
+    f.Description
+FROM
+(
+', @mutant_sql, '
+) AS m
+LEFT JOIN
+(
+', @gene_sql, '
+) AS g
+ON m.gene_id = g.gene
+LEFT JOIN
+(
+', @ogi_sql, '
+) AS o
+ON FIND_IN_SET(m.gene_id, o.genes)
+LEFT JOIN
+(
+', @trans_sql, '
+) AS t
+ON m.gene_id = t.gene_id
+LEFT JOIN
+(
+', @func_sql, '
+) AS f
+ON m.gene_id = f.ID;
+');
+
+PREPARE stmt FROM @sql;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;","MATCH (m:Mutant)<-[:has_a_mutant]-(g:Gene)
+WHERE toString(m.name) = $mutant
+OPTIONAL MATCH (g)-[:chromosome_no]->(c:Chromosome)
+OPTIONAL MATCH (g)-[:start_pos]->(sp:Position)
+OPTIONAL MATCH (g)-[:end_pos]->(ep:Position)
+OPTIONAL MATCH (g)-[:strand_info]->(st:Strand)
+OPTIONAL MATCH (ogi:OGI)-[:has_a_gene]->(g)
+OPTIONAL MATCH (g)-[:has_a_transcript]->(tr:mRNA)
+OPTIONAL MATCH (g)-[:has_a_function]->(f:Function)
+RETURN g.name AS gene,
+       c.name AS chromosome,
+       sp.name AS start,
+       ep.name AS end,
+       st.name AS strand,
+       m.name AS mutant,
+       collect(DISTINCT ogi.name) AS ogis,
+       collect(DISTINCT tr.name) AS transcripts,
+       collect(DISTINCT f.name) AS functions
+ORDER BY chromosome, toInteger(start), gene"

@@ -1,0 +1,10 @@
+# Isolated evaluation environment; do not install into the live backend env.
+# CPU torch: pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu --no-deps
+numpy==1.26.4
+pandas==2.2.3
+bert-score==0.3.13
+transformers==4.46.3
+jieba==0.42.1
+torch==2.5.1
+sentencepiece==0.2.0
+tokenizers==0.20.3

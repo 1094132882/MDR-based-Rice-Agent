@@ -1,0 +1,130 @@
+[
+  {
+    "case": "negated_strand",
+    "split": "type2",
+    "question": "LOC_Os01g01010是什么链？",
+    "reference": "LOC_Os01g01010在正链。",
+    "prediction": "LOC_Os01g01010不是正链。",
+    "interpretation": "错误：否定了参考正链"
+  },
+  {
+    "case": "negated_list",
+    "split": "type14",
+    "question": "LOC_Os01g01010上游有哪些基因？",
+    "reference": "LOC_Os01g01010上游基因包括LOC_Os01g02020、LOC_Os01g03030。",
+    "prediction": "LOC_Os01g01010上游不存在LOC_Os01g02020、LOC_Os01g03030。",
+    "interpretation": "错误：明确否定参考成员关系"
+  },
+  {
+    "case": "reversed_direction",
+    "split": "type14",
+    "question": "LOC_Os01g01010上游有哪些基因？",
+    "reference": "LOC_Os01g01010上游基因包括LOC_Os01g02020、LOC_Os01g03030。",
+    "prediction": "LOC_Os01g01010下游基因包括LOC_Os01g02020、LOC_Os01g03030。",
+    "interpretation": "错误：上游关系改为下游"
+  },
+  {
+    "case": "negated_ogi_relation",
+    "split": "type10",
+    "question": "OGI:11111111中有哪些基因？",
+    "reference": "OGI:11111111包含LOC_Os01g02020和LOC_Os01g03030。",
+    "prediction": "OGI:11111111不包含LOC_Os01g02020和LOC_Os01g03030。",
+    "interpretation": "错误：OGI成员关系否定"
+  },
+  {
+    "case": "wrong_function_gene",
+    "split": "type11",
+    "question": "LOC_Os01g01010的功能是什么？",
+    "reference": "基因LOC_Os01g01010的注释是Pirin-like protein [UniProtKB/Swiss-Prot:Q9SEE4]。",
+    "prediction": "基因LOC_Os01g02020的注释是Pirin-like protein [UniProtKB/Swiss-Prot:Q9SEE4]。",
+    "interpretation": "错误：将正确注释绑定给其他基因"
+  },
+  {
+    "case": "unrecognized_extra_claim",
+    "split": "type1",
+    "question": "LOC_Os01g01010位置是什么？",
+    "reference": "LOC_Os01g01010在Chr01:1000-2000。",
+    "prediction": "LOC_Os01g01010在Chr01:1000-2000。同时该基因已被证明控制所有水稻的抗旱性。",
+    "interpretation": "目标位置匹配；额外断言是否真实无法由参考确认，应另记未支持，不能无条件认定正确或虚假"
+  },
+  {
+    "case": "contradictory_later_coordinate",
+    "split": "type1",
+    "question": "LOC_Os01g01010位置是什么？",
+    "reference": "LOC_Os01g01010在Chr01:1000-2000。",
+    "prediction": "LOC_Os01g01010在Chr01:1000-2000。不过LOC_Os01g01010的真正位置是Chr02:9000-10000。",
+    "interpretation": "错误/冲突：同一基因的两套坐标"
+  },
+  {
+    "case": "wrong_gene_location_detected",
+    "split": "type1",
+    "question": "LOC_Os01g01010位置是什么？",
+    "reference": "LOC_Os01g01010在Chr01:1000-2000。",
+    "prediction": "LOC_Os01g02020在Chr01:1000-2000。",
+    "interpretation": "正对照：已实现的基因归属保护应拒绝"
+  },
+  {
+    "case": "partial_members",
+    "split": "type14",
+    "question": "LOC_Os01g01010上游有哪些基因？",
+    "reference": "LOC_Os01g01010上游基因包括LOC_Os01g02020、LOC_Os01g03030、LOC_Os01g04040。",
+    "prediction": "LOC_Os01g01010上游基因包括LOC_Os01g02020。",
+    "interpretation": "1/3正确成员，应P=1 R=1/3 F1=1/2"
+  },
+  {
+    "case": "extra_member",
+    "split": "type14",
+    "question": "LOC_Os01g01010上游有哪些基因？",
+    "reference": "LOC_Os01g01010上游基因包括LOC_Os01g02020、LOC_Os01g03030。",
+    "prediction": "LOC_Os01g01010上游基因包括LOC_Os01g02020、LOC_Os01g03030、LOC_Os01g04040。",
+    "interpretation": "多一个识别成员，应P=2/3 R=1 F1=.8"
+  },
+  {
+    "case": "missing_count_with_full_list",
+    "split": "type14",
+    "question": "LOC_Os01g01010上游有哪些基因？",
+    "reference": "LOC_Os01g01010上游共有2个基因:LOC_Os01g02020、LOC_Os01g03030。",
+    "prediction": "LOC_Os01g01010上游基因包括LOC_Os01g02020、LOC_Os01g03030。",
+    "interpretation": "语义列表完整且可推导数量，但会漏掉独立count原子"
+  },
+  {
+    "case": "extra_explicit_count",
+    "split": "type14",
+    "question": "LOC_Os01g01010上游有哪些基因？",
+    "reference": "LOC_Os01g01010上游基因包括LOC_Os01g02020、LOC_Os01g03030。",
+    "prediction": "LOC_Os01g01010上游共有2个基因:LOC_Os01g02020、LOC_Os01g03030。",
+    "interpretation": "新增正确可推导数量，但参考未列count会计FP"
+  },
+  {
+    "case": "only_correct_start",
+    "split": "type1",
+    "question": "LOC_Os01g01010位置是什么？",
+    "reference": "LOC_Os01g01010在Chr01:1000-2000。",
+    "prediction": "LOC_Os01g01010染色体1，起始位置为1000。",
+    "interpretation": "正确起点未配对终点时被丢弃，应是抽取覆盖缺陷"
+  },
+  {
+    "case": "correct_strand_negated_antonym",
+    "split": "type2",
+    "question": "LOC_Os01g01010是什么链？",
+    "reference": "LOC_Os01g01010在正链。",
+    "prediction": "LOC_Os01g01010在正链，不是负链。",
+    "interpretation": "语义正确但正负关键词同时出现，易被误判矛盾"
+  },
+  {
+    "case": "wrong_region",
+    "split": "type13",
+    "question": "G46 Chr01:1000-2000有哪些基因？",
+    "reference": "G46 Chr01:1000-2000包括LOC_Os01g02020和LOC_Os01g03030。",
+    "prediction": "G46 Chr02:9000-10000包括LOC_Os01g02020和LOC_Os01g03030。",
+    "interpretation": "错误区域却保留成员，缺少区域关系原子"
+  },
+  {
+    "case": "negated_transcript",
+    "split": "type3",
+    "question": "LOC_Os01g01010的转录本是什么？",
+    "reference": "LOC_Os01g01010的转录本为LOC_Os01g02020.T01。",
+    "prediction": "LOC_Os01g01010的转录本不是LOC_Os01g02020.T01。",
+    "interpretation": "否定转录本关系仍被取为成员"
+  }
+]

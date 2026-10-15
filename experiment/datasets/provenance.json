@@ -1,0 +1,26 @@
+{
+  "datasets": [
+    {
+      "file": "methods/s_cot_raps/dataset.csv",
+      "sha256": "710609b6a8fcd74ec1962eaae27181774ef680310f5cbc02a46ce1b387929d79"
+    },
+    {
+      "file": "experiment/datasets/mysql_vs_kg.csv",
+      "sha256": "cd71f1eec4515a46558d0f18ff040bff6814b8c85c36ad7fe9b91fd9445cdb9c"
+    },
+    {
+      "file": "experiment/datasets/gold_profiles.json",
+      "sha256": "bb8a8adb50b1d84cf00a36b33a11d83fd061afbe5058e4f4217d214fe349302e"
+    },
+    {
+      "file": "experiment/paper_eval/difficulty.json",
+      "sha256": "37fc29245487df4bf0bd09fd94bc4d9296e8afe5da2a025304bc2808418d09ef"
+    }
+  ],
+  "kgqa_sample_id": "zero-based CSV row index, 0..149",
+  "simple": 85,
+  "complex": 65,
+  "mysql_vs_kg_encoding": "GB18030",
+  "mysql_vs_kg_records": 50,
+  "gold_profiles": "frozen approved type contracts; reference answers unchanged"
+}

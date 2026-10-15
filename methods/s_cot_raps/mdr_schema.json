@@ -1,0 +1,168 @@
+{
+  "DEC": [
+    "Gene", "Chromosome", "Position", "Strand", "Transcripts",
+    "DNA_Sequence", "CDS_Sequence", "Protein_Sequence",
+    "Mutant", "OGI", "Function", "Expression",
+    "SV", "SV_Type", "TE", "Region",
+    "Neighbors", "Direction", "Species", "Accession"
+  ],
+  "VD": {
+    "Strand": ["+", "-", "正链", "负链", "正向", "反向"],
+    "Chromosome": ["Chr01", "Chr02", "Chr03", "Chr04", "Chr05", "Chr06", "Chr07", "Chr08", "Chr09", "Chr10", "Chr11", "Chr12"],
+    "SV_Type": ["DEL", "INS", "TRA", "INV", "OTH", "DUP", "缺失", "插入", "易位", "倒位", "其他", "deletion", "insertion"],
+    "Direction": ["upstream", "downstream", "上游", "下游", "前", "后"],
+    "TE_Type": [
+      "long_terminal_repeat", "Gypsy_LTR_retrotransposon", "Copia_LTR_retrotransposon",
+      "LTR_retrotransposon", "repeat_region", "target_site_duplication", "helitron"
+    ],
+    "Expression_Tissue": ["leaf", "root", "panicle", "young_ear", "stem", "叶", "根", "幼穗", "茎"],
+    "Gene_Pattern": [
+      "LOC_Os\\d{2}g\\d+",
+      "Os[A-Za-z0-9_]+G\\d+(?:\\.\\d+)?",
+      "Os\\d{2}g\\d+",
+      "Oglab_\\d+",
+      "TMG\\d+",
+      "R\\d+C\\d+g\\d+",
+      "22NB[A-Z]\\d+"
+    ],
+    "OGI_Pattern": "OGI:\\d{8}",
+    "Position_Pattern": "\\d+-\\d+",
+    "Mutant_Pattern": "22NB[A-Z]\\d+",
+    "SV_Name_Pattern": "[A-Za-z0-9]+_[A-Za-z0-9]+_(DEL|INS|TRA|INV|OTH)\\d+",
+    "Accession": [
+      "Nipponbare", "9311", "MH63", "ZS97", "IR64", "Azucena", "N22",
+      "G46", "G8", "DG", "TM", "LJ", "II32", "Y58S", "Y3551", "Tumba",
+      "NamRoo", "Lemont", "Kosh", "J4155", "J4155S", "DHX2", "FS32",
+      "LK638S", "XL628S", "YX1", "HZ", "CN1", "D62", "FH838", "ZH11",
+      "R498", "R527", "R9311", "S548", "WSSM", "Basmati1", "Ogla", "OglaRS2",
+      "02428", "117425", "125619", "125827", "127518", "127564", "127652", "127742", "128077", "132278", "132424"
+    ]
+  },
+  "MPS": {
+    "T": "TRA",
+    "Chr": "Chromosome",
+    "chrom": "Chromosome",
+    "chr": "Chromosome",
+    "pos": "Position",
+    "position": "Position",
+    "strand": "Strand",
+    "正链": "+",
+    "负链": "-",
+    "正向": "+",
+    "反向": "-",
+    "AGIS": "AGIS_ID",
+    "MSU": "MSU_ID",
+    "RAP-DB": "RAP_ID",
+    "RAP": "RAP_ID",
+    "gene": "Gene",
+    "基因": "Gene",
+    "染色体": "Chromosome",
+    "位置": "Position",
+    "转录本": "Transcripts",
+    "mRNA": "Transcripts",
+    "突变体": "Mutant",
+    "结构变异": "SV",
+    "转座元件": "TE",
+    "转座子": "TE",
+    "te": "TE",
+    "表达量": "Expression",
+    "邻近基因": "Neighbors",
+    "上游": "upstream",
+    "下游": "downstream",
+    "DEL": "Deletion",
+    "INS": "Insertion",
+    "TRA": "Translocation",
+    "INV": "Inversion",
+    "OTH": "Other",
+    "缺失": "DEL",
+    "插入": "INS",
+    "易位": "TRA",
+    "倒位": "INV",
+    "deletion": "DEL",
+    "insertion": "INS",
+    "others": "OTH",
+    "叶": "leaf",
+    "根": "root",
+    "幼穗": "young_ear",
+    "穗": "panicle",
+    "茎": "stem"
+  },
+  "Tools": {
+    "gene_basic_info": {
+      "in": ["gene_name"],
+      "out": ["Gene", "Chromosome", "Position", "Strand", "Transcripts", "URL"],
+      "description": "查询基因基本信息（位置、链、转录本、序列链接）"
+    },
+    "gene_function": {
+      "in": ["gene_name"],
+      "out": ["Gene", "Function"],
+      "description": "查询基因功能注释"
+    },
+    "gene_locator": {
+      "in": ["accession", "chromosome", "start", "end"],
+      "out": ["Genes", "Region", "gene_count"],
+      "description": "查询某品种某染色体某区域内的基因"
+    },
+    "gene_mutant_info": {
+      "in": ["gene_name", "mutant_id"],
+      "out": ["Gene", "Mutants", "Mutant", "Genes", "mutant_count"],
+      "description": "查询基因突变体信息或突变体关联的基因（双向）"
+    },
+    "ogi_info": {
+      "in": ["gene_name", "ogi_id"],
+      "out": ["Gene", "OGI", "Genes", "gene_count"],
+      "description": "查询OGI同源基因索引信息"
+    },
+    "adjacent_genes": {
+      "in": ["gene_name", "direction", "distance", "k"],
+      "out": ["TargetGene", "Neighbors", "Direction", "neighbor_count"],
+      "description": "查询基因的上下游邻近基因"
+    },
+    "homologous_gene_and_expression": {
+      "in": ["gene_name"],
+      "out": ["Gene", "Expression", "leaf", "root", "panicle", "young_ear", "stem"],
+      "description": "查询基因同源信息和表达量"
+    },
+    "structural_variation_link": {
+      "in": ["sv_name"],
+      "out": ["SV", "TE_Annotations"],
+      "description": "查询结构变异关联的转座元件"
+    },
+    "structural_variation_locator": {
+      "in": ["gene_name", "accession", "chromosome", "start", "end", "sv_type"],
+      "out": ["Gene", "SVs", "sv_count", "Region", "longest_sv"],
+      "description": "查询某基因或某区域内的结构变异"
+    }
+  },
+  "QuestionTypes": {
+    "type1": {"intent": "location", "tool": "gene_basic_info", "description": "基因染色体位置查询"},
+    "type2": {"intent": "strand", "tool": "gene_basic_info", "description": "基因链方向查询"},
+    "type3": {"intent": "transcripts", "tool": "gene_basic_info", "description": "基因转录本查询"},
+    "type4": {"intent": "dna_url", "tool": "gene_basic_info", "description": "DNA序列链接查询"},
+    "type5": {"intent": "cds_url", "tool": "gene_basic_info", "description": "CDS序列链接查询"},
+    "type6": {"intent": "protein_url", "tool": "gene_basic_info", "description": "蛋白质序列链接查询"},
+    "type7": {"intent": "gene_to_mutants", "tool": "gene_mutant_info", "description": "基因→突变体查询"},
+    "type8": {"intent": "mutant_to_genes", "tool": "gene_mutant_info", "description": "突变体→基因查询"},
+    "type9": {"intent": "gene_to_ogi", "tool": "ogi_info", "description": "基因→OGI编号查询"},
+    "type10": {"intent": "ogi_to_genes", "tool": "ogi_info", "description": "OGI→基因列表查询"},
+    "type11": {"intent": "function", "tool": "gene_function", "description": "基因功能注释查询"},
+    "type12": {"intent": "expression", "tool": "homologous_gene_and_expression", "description": "基因表达量查询"},
+    "type13": {"intent": "region_genes", "tool": "gene_locator", "description": "区域内基因查询"},
+    "type14": {"intent": "adjacent_range", "tool": "adjacent_genes", "description": "上游区域邻近基因"},
+    "type15": {"intent": "adjacent_range", "tool": "adjacent_genes", "description": "下游区域邻近基因"},
+    "type16": {"intent": "adjacent_nearest", "tool": "adjacent_genes", "description": "最近上游基因"},
+    "type17": {"intent": "adjacent_nearest", "tool": "adjacent_genes", "description": "最近下游基因"},
+    "type18": {"intent": "adjacent_nearest_n", "tool": "adjacent_genes", "description": "上游前N个基因"},
+    "type19": {"intent": "adjacent_nearest_n", "tool": "adjacent_genes", "description": "下游前N个基因"},
+    "type20": {"intent": "gene_to_ogi_with_count", "tool": "ogi_info", "description": "OGI成员数量查询"},
+    "type21": {"intent": "sv_gene", "tool": "structural_variation_locator", "description": "基因区域SV查询"},
+    "type22": {"intent": "sv_gene", "tool": "structural_variation_locator", "description": "基因区域特定类型SV"},
+    "type23": {"intent": "sv_region", "tool": "structural_variation_locator", "description": "区域SV查询"},
+    "type24": {"intent": "sv_region", "tool": "structural_variation_locator", "description": "区域特定类型SV"},
+    "type25": {"intent": "sv_region_longest", "tool": "structural_variation_locator", "description": "区域最长SV"},
+    "type26": {"intent": "sv_region_longest", "tool": "structural_variation_locator", "description": "区域特定类型最长SV"},
+    "type27": {"intent": "sv_region_stats", "tool": "structural_variation_locator", "description": "区域SV类型统计"},
+    "type28": {"intent": "sv_region_stats", "tool": "structural_variation_locator", "description": "区域特定类型SV数量"},
+    "type29": {"intent": "sv_link", "tool": "structural_variation_link", "description": "SV关联TE注释"}
+  }
+}

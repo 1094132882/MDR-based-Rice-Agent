@@ -1,0 +1,34 @@
+# Local credentials and environments
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+.venv/
+venv/
+# Generated experimental material is never published
+**/results*/
+**/runs/
+outputs/
+*.log
+*_trace.jsonl
+bertscore_cache.json
+# Build/cache/model/database artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+dist/
+.cache/
+models/
+*.safetensors
+*.bin
+*.pt
+*.dump
+*.db
+# IDE/backup files
+.idea/
+.vscode/
+.DS_Store
+*.bak*
+*.save
